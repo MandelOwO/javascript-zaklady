@@ -1,0 +1,26 @@
+.table{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.item{
+    border: black solid 1px;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg) rotate3d(0, 0, 0, 0deg);
+
+    }
+    to {
+        transform: rotate(360deg) rotate3d(200, 360, 254, 360deg);
+    }
+}
+
+.fill{
+    background-color: deeppink;
+    animation: rotation 5s infinite linear;
+}
