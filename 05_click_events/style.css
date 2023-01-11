@@ -1,0 +1,14 @@
+.button-container{
+    display: flex;
+    gap: 20px;
+}
+
+.button{
+    background-color: lightblue;
+    width: 300px;
+    height: 150px;
+}
+
+.active{
+    background-color: crimson;
+}

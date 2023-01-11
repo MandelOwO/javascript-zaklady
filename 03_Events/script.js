@@ -2,7 +2,7 @@
 let paras = document.querySelectorAll('p');
 let checkbox = document.querySelector('input[type=checkbox]')
 
-checkbox.addEventListener('change', function (e) {
+checkbox.addEventListener('change', function () {
     if (this.checked){
         addListeners();
     } else  {
@@ -11,18 +11,19 @@ checkbox.addEventListener('change', function (e) {
 })
 
 function addListeners() {
-    paras.forEach(function (p) {
-        p.addEventListener('click', changePara)
-    })
+    paras.forEach(addListener)
+}
+
+function addListener(item) {
+    item.addEventListener('click', changePara)
 }
 
 function removeListeners() {
-paras.forEach(function (p) {
-    p.removeEventListener('click', changePara)
-})
+    paras.forEach(function (p) {
+        p.removeEventListener('click', changePara)
+    })
 }
 
 function changePara() {
     this.classList.toggle('yellow')
 }
-
