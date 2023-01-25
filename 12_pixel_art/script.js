@@ -23,10 +23,12 @@ function makeRows(rows, cols) {
 makeRows(50, 50);
 
 function draw() {
-    if (!mouseDown)
-        return;
+    while (mouseDown) {
+        this.style.backgroundColor = color;
+        console.log("a");
+    }
 
-    this.style.backgroundColor = color;
+
 }
 
 document.querySelector("#btnDelete").addEventListener('click', function () {
