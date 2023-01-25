@@ -15,7 +15,7 @@ function makeRows(rows, cols) {
     for (let c = 0; c < (rows * cols); c++) {
         let cell = document.createElement("div");
         canvas.appendChild(cell).className = "grid-item";
-        cell.addEventListener('mouseover', draw)
+        cell.addEventListener('mousemove', draw)
         cells.push(cell);
     }
 }
@@ -23,12 +23,10 @@ function makeRows(rows, cols) {
 makeRows(50, 50);
 
 function draw() {
-    while (mouseDown) {
-        this.style.backgroundColor = color;
-        console.log("a");
-    }
+    if (!mouseDown)
+        return;
 
-
+    this.style.backgroundColor = color;
 }
 
 document.querySelector("#btnDelete").addEventListener('click', function () {
@@ -49,3 +47,4 @@ colorPicker.addEventListener('input', function (e) {
     color = this.value;
     console.log(color);
 })
+
