@@ -1,3 +1,10 @@
+*, *::after, *::before {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    cursor: default;
+}
+
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
@@ -14,7 +21,17 @@
     text-align: center;
 }
 
-#container{
+#container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
 }
+
+#buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
