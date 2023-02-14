@@ -1,0 +1,59 @@
+body {
+    display: flex;
+}
+
+body * {
+    user-select: none;
+}
+
+code {
+    background: #333;
+    color: #fff;
+}
+
+.desc {
+    flex: 1;
+    font-size: 200%;
+    padding: 40px 100px;
+}
+
+.field {
+    flex: 1;
+    height: 500px;
+    max-width: 500px;
+    background: brown;
+    border-radius: 10px;
+    border: 12px solid #6D5720;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 3px;
+}
+
+.fieldSlot {
+    background: yellow;
+    background: url('img/dirt.svg');
+    background-position: left top;
+    background-size: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 300%;
+    color: #fff9;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.fieldSlot.hydrated {
+    background-image: url('img/water.svg');
+}
+
+.fieldSlot.carrot {
+    background-image: url('img/carrots.svg'), url('img/dirt.svg');
+}
+
+.fieldSlot.hydrated.carrot {
+    background-image: url('img/carrots.svg'), url('img/water.svg');
+}

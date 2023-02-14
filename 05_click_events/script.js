@@ -1,11 +1,11 @@
-let buttons = document.querySelectorAll('.button')
+// let buttons = document.querySelectorAll('.button')
+//
+// buttons.forEach(addListener)
+//
+// function addListener(item) {
+//     item.addEventListener('click', changeColor)
+// }
 
-buttons.forEach(addListener)
-
-function addListener(item) {
-    item.addEventListener('click', changeColor)
-}
-
-function changeColor() {
-    this.classList.toggle('active')
+function changeColor(btn) {
+    btn.classList.toggle('active')
 }
