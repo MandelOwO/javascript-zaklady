@@ -8,6 +8,9 @@ block.style.height = `${height}px`;
 
 let isHeld = false
 
+let xs = 0;
+let ys = 0;
+
 block.addEventListener('mousedown', e => {
     isHeld = true;
     block.classList.add('rotate');
@@ -21,8 +24,16 @@ document.addEventListener('mouseup', e => {
 
 
 document.addEventListener('mousemove', e => {
-       if (isHeld) {
-           block.style.left = `${e.x - width/2}px`;
-           block.style.top = `${e.y - height/2}px`;
-       }
+    if (isHeld) {
+        block.style.left = `${e.x - width / 2}px`;
+        block.style.top = `${e.y - height / 2}px`;
+
+        xs = e.x;
+        ys = e.y;
+
+    }
 })
+
+
+/* Přidání kostičky */
+
