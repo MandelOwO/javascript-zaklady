@@ -12,17 +12,15 @@ function addItem() {
     }
 
     let item = document.createElement("li");
-    let innerText = document.createTextNode(text + ' [');
 
     let del = document.createElement('a');
     del.innerText = 'X';
     del.href = "#";
 
-    del.addEventListener('click', e => removeItem(e, item));
+    del.addEventListener('click', e => removeItem(item));
 
-    item.appendChild(innerText);
+    item.appendChild(document.createTextNode(text + ' ['));
     item.appendChild(del);
-
     item.appendChild(document.createTextNode(']'));
 
 
@@ -31,7 +29,7 @@ function addItem() {
 }
 
 
-function removeItem(e, item) {
+function removeItem(item) {
     console.log(item)
     item.remove();
 }
