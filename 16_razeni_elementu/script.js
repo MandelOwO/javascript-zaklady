@@ -31,9 +31,9 @@ function addItem() {
 
     item.appendChild(document.createTextNode(text + ' ['));
     item.appendChild(up);
-    item.appendChild(document.createTextNode(' | '))
+    item.appendChild(document.createTextNode(' | '));
     item.appendChild(down);
-    item.appendChild(document.createTextNode(' | '))
+    item.appendChild(document.createTextNode(' | '));
     item.appendChild(del);
     item.appendChild(document.createTextNode(']'));
 
@@ -61,7 +61,6 @@ function moveDown(item) {
 }
 
 function removeItem(item) {
-    console.log(item)
     item.remove();
 }
 
