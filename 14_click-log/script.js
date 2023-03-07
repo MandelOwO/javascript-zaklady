@@ -14,11 +14,11 @@ let secret = document.querySelector('#clickme')
 
 secret.addEventListener('click', function () {
 
-    for (let i = 0; i < 1000; i++) {
-        setTimeout(function () {
-            let line = document.createElement('p')
-            line.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
-            list.insertBefore(line, list.firstElementChild);
-        }, 10 * i)
-    }
+
+    setInterval(function () {
+        let line = document.createElement('p')
+        line.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
+        list.insertBefore(line, list.firstElementChild);
+    }, 100)
+
 })

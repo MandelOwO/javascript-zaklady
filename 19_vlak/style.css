@@ -1,0 +1,46 @@
+.border {
+    border: 5px black solid;
+    height: 350px;
+    width: 350px;
+    border-radius: 40px;
+}
+
+.back {
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    margin: 25px;
+}
+
+.circle {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: #6e6e6e solid;
+
+    position: absolute;
+}
+
+#redL {
+    top: 50px;
+    left: 50px;
+}
+
+#redR {
+    top: 50px;
+    left: 220px;
+}
+
+#white {
+    top: 200px;
+    left: 135px;
+}
+
+.redFill {
+    background-color: red;
+}
+
+.whiteFill {
+    background-color: white;
+}
