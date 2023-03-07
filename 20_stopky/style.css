@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+.laps-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
